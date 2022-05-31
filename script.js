@@ -6,7 +6,6 @@
 
 // Set Arrays
 
-
 var isLower = [ 'a', 'b','c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var isUpper = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -24,9 +23,20 @@ var userChoice = []
 var generateBtn = document.querySelector("#generate");
 
 
+// password length validator function
+function validateCharLength (numberOfChars) {
+  if (numberOfChars < 8 || numberOfChars > 128) {
+    alert("Please pick a number between 8 and 128");
+    return generatePassword()
+  }
+  return numberOfChars
+}
+
+
 
 function generatePassword() {
-  prompt("helllllo PopUP!")
+  var numberOfChars = prompt("Hello, please choose the length of your password (8-128)");
+  validateCharLength(numberOfChars);
 
   var addLower = confirm("Would you like to include lowercase");
   if (addLower === true) {
@@ -48,9 +58,18 @@ function generatePassword() {
     userChoice.push(...isChar);
   }
 
-
   console.log("userChoice is: " + userChoice);
 }
+
+
+userPassword = ""
+
+// user Password Logic
+
+
+
+
+
 
 
 // Write password to the #password input
