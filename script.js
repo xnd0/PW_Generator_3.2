@@ -58,6 +58,11 @@ function generatePassword() {
     userChoice.push(...isChar);
   }
 
+  else {
+    alert("--Please pick at least one option!--");
+    return generatePassword();
+  }
+
   console.log("userChoice is: " + userChoice);
 
 
