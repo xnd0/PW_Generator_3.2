@@ -33,6 +33,21 @@ function generatePassword() {
     userChoice.push(...isLower);
   }
 
+  var addUpper = confirm("Would you like to include Uppercase?")
+  if (addUpper) {
+    userChoice.push(...isUpper);
+  }
+
+  var addNumber = confirm("Would you like to include Numbers?")
+  if (addNumber) {
+    userChoice.push(...isNumber);
+  }
+
+  var addChar = confirm("Would you like to include Special Characters?")
+  if (addChar) {
+    userChoice.push(...isChar);
+  }
+
 
   console.log("userChoice is: " + userChoice);
 }
