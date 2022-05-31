@@ -59,13 +59,27 @@ function generatePassword() {
   }
 
   console.log("userChoice is: " + userChoice);
-}
 
 
-userPassword = ""
+  userPassword = ""
 
-// user Password Logic
+  // user Password Logic
 
+  for (var i = 0; i < numberOfChars; i++) {
+
+    var randomPick = userChoice[Math.floor(Math.random() * userChoice.length)];
+
+    console.log("randomPick is:" + randomPick);
+
+    userPassword = userPassword.concat(randomPick);
+
+  }
+
+  password = userPassword
+
+  return password;
+  
+}  
 
 
 
