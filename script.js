@@ -16,10 +16,27 @@ var isNumber = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var isChar = [ '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '{', '|', '}', '~'];
 
 
+// Array to store user input choices
+var userChoice = []
 
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+
+
+function generatePassword() {
+  prompt("helllllo PopUP!")
+
+  var addLower = confirm("Would you like to include lowercase");
+  if (addLower === true) {
+    userChoice.push(...isLower);
+  }
+
+
+  console.log("userChoice is: " + userChoice);
+}
+
 
 // Write password to the #password input
 function writePassword() {
@@ -34,16 +51,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-generateBtn.addEventListener("click", generatePassword);
 
 
-function generatePassword() {
-  prompt("helllllo PopUP!")
-}
-
-
-
-
+// console.log("userChoice is: " + userChoice);
 
 // console.log(isLower);
 // console.log(isUpper);
