@@ -18,10 +18,6 @@ var isChar = [ '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', ':', 
 
 
 
-
-
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -34,13 +30,23 @@ function writePassword() {
 
 }
 
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+generateBtn.addEventListener("click", generatePassword);
 
 
-console.log(isLower);
-console.log(isUpper);
-console.log(isNumber);
-console.log(isChar);
+function generatePassword() {
+  prompt("helllllo PopUP!")
+}
+
+
+
+
+
+// console.log(isLower);
+// console.log(isUpper);
+// console.log(isNumber);
+// console.log(isChar);
 
